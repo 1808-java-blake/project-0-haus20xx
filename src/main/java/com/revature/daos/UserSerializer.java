@@ -49,7 +49,7 @@ public class UserSerializer implements UserDao {
 			throw new UserAlreadyExistsException("User already exists");
 		
 		if(u.getId().equalsIgnoreCase("register")) {
-			throw new UserAlreadyExistsException("Cannot use the ID register");
+			throw new UserAlreadyExistsException("Cannot use the ID 'register'");
 		}
 			
 		try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f))){
