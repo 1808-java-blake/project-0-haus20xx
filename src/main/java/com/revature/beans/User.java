@@ -1,34 +1,53 @@
 package com.revature.beans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5324650928845129578L;
 	private String id;
 	private String pass;
 	private static String adminPasscode;
 	private double balance;
-	private List<Double> tHistory;
+	private List<Integer> tHistory;
 	private boolean admin = false;
 	
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.tHistory = new ArrayList<Integer>();	
 	}
 
-	public User(String id, String pass, double balance) {
+	public User(String id, String pass, int balance) {
 		super();
 		this.id = id;
 		this.pass = pass;
 		this.balance = balance;
-		this.tHistory = new ArrayList<Double>();
+		this.tHistory = new ArrayList<Integer>();
+		this.tHistory.add(balance);
 	}
+	public User(String id, String pass, int balance, boolean admin) {
+		super();
+		this.id = id;
+		this.pass = pass;
+		this.balance = balance;
+		this.tHistory = new ArrayList<Integer>();
+		this.tHistory.add(balance);
+		this.admin = admin;
+	}
+	
 	public void withdraw() {
 		
 	}
-	public void deposit(String noPunctuation) {
-		
+	
+	public void deposit(int money) {
+		balance += money;
+		tHistory.add(money);
 	}
+	
 	public void makeAdmin(String adminpass) {
 		if(adminpass.equals(adminPasscode))
 			this.admin = true;
@@ -37,6 +56,14 @@ public class User {
 	}
 	
 	
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -46,13 +73,14 @@ public class User {
 	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(double balance) {
+	public void setBalance(int balance) {
 		this.balance = balance;
+		this.tHistory.add(balance);
 	}
-	public List<Double> gettHistory() {
+	public List<Integer> gettHistory() {
 		return tHistory;
 	}
-	public void settHistory(List<Double> tHistory) {
+	public void settHistory(List<Integer> tHistory) {
 		this.tHistory = tHistory;
 	}
 	@Override

@@ -7,10 +7,11 @@ import com.revature.daos.UserDao;
 public class LoginScreen implements Screen{
 
 	private UserDao ud = UserDao.currentUserDao;
-	private Scanner in = new Scanner(System.in);
+	private Scanner in;
 	@Override
 	public Screen start() {
 		String userName, userPass;
+		in = new Scanner(System.in);
 		System.out.println("Please enter your username or type Register to sign up");
 		userName = in.nextLine();
 		

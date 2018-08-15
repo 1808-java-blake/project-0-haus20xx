@@ -1,6 +1,7 @@
 package com.revature.daos;
 
 import com.revature.beans.User;
+import com.revature.exceptions.UserAlreadyExistsException;
 
 
 public interface UserDao {
@@ -9,9 +10,11 @@ public interface UserDao {
 	//change the backend to SQL you would only need to replace the UserSerializer class
 	//with a new class utilizing that backend and changing the one line here
 	
-	void createUser(User u);
+	void createUser(User u) throws UserAlreadyExistsException;
 	
 	User findByUsernameAndPassword(String username, String password);
+	
+	User findByUsername(String username);
 	
 	void updateUser(User u);
 	
