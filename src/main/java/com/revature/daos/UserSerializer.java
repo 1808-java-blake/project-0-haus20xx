@@ -90,14 +90,15 @@ public class UserSerializer implements UserDao {
 			return;
 		}
 		String idCheck = u.getId();
+		User marker = null;
 		for(User current: userSet) {
 			if(current.getId().equals(idCheck))
 			{
-				deleteUser(current);
-				userSet.add(u);
+				marker = current;
 			}
-			
 		}
+		userSet.remove(marker);
+		userSet.add(u);
 	}
 	
 	
@@ -105,5 +106,13 @@ public class UserSerializer implements UserDao {
 	public void deleteUser(User u) {
 		userSet.remove(u);
 	}
+	
+	public void displayAllUserID(){
+		for(User cur:userSet) {
+			System.out.println(cur.getId());
+		}
+	}
+	
+	
+	}
 
-}

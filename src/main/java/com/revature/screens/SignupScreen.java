@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.revature.beans.User;
 import com.revature.daos.UserDao;
 import com.revature.exceptions.UserAlreadyExistsException;
+import com.revature.launcher.BankingLauncher;
 import com.revature.utility.UtilityClass;
 
 public class SignupScreen implements Screen{
@@ -14,7 +15,7 @@ public class SignupScreen implements Screen{
 	}
 	@Override
 	public Screen start() {
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = BankingLauncher.scan;
 		User u = new User();
 		System.out.println("Enter the Username you would like to register:");
 		u.setId(scan.nextLine());

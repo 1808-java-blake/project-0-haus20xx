@@ -1,10 +1,13 @@
 package com.revature.launcher;
 
+import java.util.Scanner;
+
 import com.revature.screens.Screen;
 import com.revature.screens.StartupScreen;
 
 public class BankingLauncher {
 
+	public static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) throws Exception {
 		Screen currentScreen = new StartupScreen();
 //		User adm = new User("kh14c","supersecret",1000000,true);
@@ -15,5 +18,6 @@ public class BankingLauncher {
 				break;
 			currentScreen = currentScreen.start();
 		}
+		scan.close();
 	}
 }

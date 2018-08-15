@@ -39,7 +39,7 @@ public class User implements Serializable {
 		this.admin = admin;
 	}
 	
-	public void withdraw() {
+	public void withdraw(int amount) {
 		
 	}
 	

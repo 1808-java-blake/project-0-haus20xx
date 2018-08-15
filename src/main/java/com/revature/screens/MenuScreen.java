@@ -37,13 +37,19 @@ public class MenuScreen implements Screen {
 			loggedIn.deposit(Integer.parseInt(holder));
 			break;
 		case "2":
+			System.out.println("How much would you like to withdraw?");
+			holder = scan.nextLine();
+			holder = UtilityClass.removePunctuation(holder);
+			loggedIn.withdraw(Integer.parseInt(holder));
 			break;
 		case "5":
 			System.out.println("Thank you for using Bank Bank");
 			ud.updateUser(loggedIn);
 			return null;
-		default:
-			System.out.println("Invalid choice");
+		case "6":
+			return new AdminMenuScreen(loggedIn);
+			default:
+			System.out.println("Invalid choice, ensure you entered a listed number with no punctuation");
 			return this;
 		}
 		

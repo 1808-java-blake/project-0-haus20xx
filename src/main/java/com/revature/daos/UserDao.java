@@ -20,5 +20,6 @@ public interface UserDao {
 	
 	void deleteUser(User u);
 	
+	void displayAllUserID();
 
 }
