@@ -28,7 +28,7 @@ public class AdminMenuScreen implements Screen{
 		System.out.println("6. Return to standard menu");
 		
 		
-		switch (scan.next()) {
+		switch (scan.nextLine()) {
 		case "1":
 			ud.displayAllUserID();
 			break;

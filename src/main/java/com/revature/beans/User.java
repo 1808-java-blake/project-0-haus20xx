@@ -5,10 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5324650928845129578L;
+
 	private String id;
 	private String pass;
 	private static String adminPasscode;
@@ -40,7 +37,14 @@ public class User implements Serializable {
 	}
 	
 	public void withdraw(int amount) {
-		
+		if (amount < 0)
+			amount = amount * -1;
+		if (amount > balance) {
+			System.out.println("Insufficient funds!");
+			return;
+		}
+		balance -= amount;
+		tHistory.add(-1*amount);
 	}
 	
 	public void deposit(int money) {
@@ -136,8 +140,16 @@ public class User implements Serializable {
 	
 	public String historyToString() {
 		
+		int historyLength = tHistory.size();
+		String returnMe = "";
+		for (int i = 0; i<historyLength;i++) {
 
-		return null;
+			if (tHistory.get(i)>=0)
+				returnMe = returnMe +("Deposit: " + tHistory.get(i) + "\n");
+			else
+				returnMe = returnMe +("Withdrawl: " + tHistory.get(i) + "\n");
+		}
+		return returnMe;
 	}
 	
 }

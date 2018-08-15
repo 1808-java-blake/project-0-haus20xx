@@ -15,7 +15,7 @@ import com.revature.exceptions.UserAlreadyExistsException;
 public class UserSerializer implements UserDao {
 
 	
-	private static File f = new File("src/main/resources/users/userObjectList.txt");
+	private static File f = new File("src/main/resources/users/userObjectList1.txt");
 	private static Set<User> userSet;
 	public static final UserSerializer us = new UserSerializer();
 	
