@@ -12,7 +12,7 @@ public class User implements Serializable {
 	private String id;
 	private String pass;
 	private static String adminPasscode;
-	private double balance;
+	private int balance;
 	private List<Integer> tHistory;
 	private boolean admin = false;
 	
@@ -70,7 +70,7 @@ public class User implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public double getBalance() {
+	public int getBalance() {
 		return balance;
 	}
 	public void setBalance(int balance) {
@@ -131,9 +131,13 @@ public class User implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", pass=" + pass + ", balance=" + balance + ", tHistory=" + tHistory + ", admin="
-				+ admin + "]";
+		return "User[id=" + id + ", balance=" + balance + ", admin=" + admin + "]";
 	}
 	
+	public String historyToString() {
+		
+
+		return null;
+	}
 	
 }

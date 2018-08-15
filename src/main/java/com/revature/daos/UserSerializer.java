@@ -19,6 +19,7 @@ public class UserSerializer implements UserDao {
 	private static Set<User> userSet;
 	public static final UserSerializer us = new UserSerializer();
 	
+	@SuppressWarnings("unchecked")
 	private UserSerializer() {
 		if (f.exists()) {
 			try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f))){
