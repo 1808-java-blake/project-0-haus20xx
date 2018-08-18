@@ -7,7 +7,6 @@ import com.revature.beans.User;
 import com.revature.daos.UserDao;
 import com.revature.exceptions.UserAlreadyExistsException;
 import com.revature.launcher.BankingLauncher;
-import com.revature.utility.UtilityClass;
 
 public class SignupScreen implements Screen{
 	private UserDao ud = UserDao.currentUserDao;
@@ -24,7 +23,7 @@ public class SignupScreen implements Screen{
 		System.out.println("Enter the Password you would like to use:");
 		u.setPass(scan.nextLine());
 		System.out.println("Please enter your initial deposit:");
-		u.setBalance(Integer.parseInt(UtilityClass.removePunctuation(scan.nextLine())));
+		u.setBalance(Integer.parseInt(scan.nextLine()));
 		
 		ud.createUser(u);
 		}

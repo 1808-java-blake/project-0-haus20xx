@@ -141,35 +141,13 @@ public class UserDaoJdbc implements UserDao{
 				ps.setBoolean(4, u.isAdmin());
 				ps.setInt(5, u.getId());
 				ps.executeUpdate();
-
-//				ps = conn.prepareStatement("SELECT amount FROM transactions WHERE user_serial = ? ORDER BY transaction_serial asc");
-//				ps.setInt(1, u.getId());
-//				ResultSet rs = ps.executeQuery();
-//				List<Integer> l = new ArrayList<>();
-//			
-//				while(rs.next()) {
-//					l.add((int)rs.getDouble("amount"));
-//				}
-//				
-//				if(u.gettHistory().size()>l.size()) {
-//					for(int i = l.size();i<u.gettHistory().size();i++) {
-//						ps = conn.prepareStatement("INSERT INTO transactions(user_serial,amount) VALUES (?,?)");
-//						ps.setInt(1, u.getId());
-//						ps.setDouble(2, u.gettHistory().get(i));
-//						ps.executeUpdate();
-//
-				//	}
-		//		}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	@Override
 	public void deleteUser(User u) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -194,10 +172,8 @@ public class UserDaoJdbc implements UserDao{
 			ps.executeUpdate();
 			updateUser(u);
 		}
-		catch(SQLException e){
-			
+		catch(SQLException e){	
 		}
-		
 	}
 	@Override
 	public void makeWithdrawl(User u, int amount) {
@@ -212,8 +188,6 @@ public class UserDaoJdbc implements UserDao{
 		catch(SQLException e){
 			
 		}
-
-		
 	}
 
 }

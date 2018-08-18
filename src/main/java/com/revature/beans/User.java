@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.revature.daos.UserDao;
-
 public class User implements Serializable {
 
 	private String userID;

@@ -73,7 +73,6 @@ public class AdminMenuScreen implements Screen{
 			System.out.println("Invalid choice, please make sure you entered a listed number with no punctuation");
 			break;
 		}
-		
 		return this;
 	}
 	

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import com.revature.beans.User;
 import com.revature.daos.UserDao;
-import com.revature.utility.UtilityClass;
 
 public class MenuScreen implements Screen {
 
@@ -65,8 +64,6 @@ public class MenuScreen implements Screen {
 			System.out.println("Invalid choice, ensure you entered a listed number with no punctuation");
 			return this;
 		}
-		
-		
 		return this;
 	}
 

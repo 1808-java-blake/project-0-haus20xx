@@ -29,7 +29,6 @@ public class LoginScreen implements Screen{
 			System.out.println("Logging in...");
 			return new MenuScreen(ud.findByUsernameAndPassword(userName, userPass));
 		}
-
 		return this;
 	}
 	

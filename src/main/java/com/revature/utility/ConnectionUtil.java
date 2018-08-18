@@ -17,10 +17,8 @@ public class ConnectionUtil {
 		try {
 			dbProps.load(new FileInputStream("src/main/resources/database.properties"));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -31,7 +29,6 @@ public class ConnectionUtil {
 			c = DriverManager.getConnection(dbProps.getProperty("url"), dbProps.getProperty("username")
 					, dbProps.getProperty("password"));
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

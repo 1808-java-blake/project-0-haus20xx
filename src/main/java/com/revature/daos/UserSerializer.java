@@ -67,7 +67,7 @@ public class UserSerializer implements UserDao {
 	@Override
 	public User findByUsernameAndPassword(String username, String password) {
 		for (User u: userSet) {
-			if (username.equals(u.getId())&&password.equals(u.getPass())){
+			if (username.equals(u.getUserId())&&password.equals(u.getPass())){
 				return u;
 			}
 		}
@@ -77,7 +77,7 @@ public class UserSerializer implements UserDao {
 	}
 	public User findByUsername(String username) {
 		for (User u: userSet) {
-			if (username.equals(u.getId())){
+			if (username.equals(u.getUserId())){
 				return u;
 			}
 		}
