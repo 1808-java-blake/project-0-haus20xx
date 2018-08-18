@@ -4,31 +4,35 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.revature.daos.UserDao;
+
 public class User implements Serializable {
 
-	private String id;
+	private String userID;
 	private String pass;
-	private static String adminPasscode;
+	private static final String adminPasscode = "top level secret";
 	private int balance;
 	private List<Integer> tHistory;
 	private boolean admin = false;
+	private int id;
+	
 	
 	public User() {
 		super();
 		this.tHistory = new ArrayList<Integer>();	
 	}
 
-	public User(String id, String pass, int balance) {
+	public User(String userID, String pass, int balance) {
 		super();
-		this.id = id;
+		this.userID =userID;
 		this.pass = pass;
 		this.balance = balance;
 		this.tHistory = new ArrayList<Integer>();
 		this.tHistory.add(balance);
 	}
-	public User(String id, String pass, int balance, boolean admin) {
+	public User(String userID, String pass, int balance, boolean admin) {
 		super();
-		this.id = id;
+		this.userID = userID;
 		this.pass = pass;
 		this.balance = balance;
 		this.tHistory = new ArrayList<Integer>();
@@ -36,15 +40,16 @@ public class User implements Serializable {
 		this.admin = admin;
 	}
 	
-	public void withdraw(int amount) {
+	public boolean withdraw(int amount) {
 		if (amount < 0)
 			amount = amount * -1;
 		if (amount > balance) {
 			System.out.println("Insufficient funds!");
-			return;
+			return false;
 		}
 		balance -= amount;
 		tHistory.add(-1*amount);
+		return true;
 	}
 	
 	public void deposit(int money) {
@@ -68,10 +73,16 @@ public class User implements Serializable {
 		this.pass = pass;
 	}
 
-	public String getId() {
+	public String getUserId() {
+		return userID;
+	}
+	public void setUserId(String userID) {
+		this.userID = userID;
+	}
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public int getBalance() {
@@ -79,7 +90,6 @@ public class User implements Serializable {
 	}
 	public void setBalance(int balance) {
 		this.balance = balance;
-		this.tHistory.add(balance);
 	}
 	public List<Integer> gettHistory() {
 		return tHistory;
@@ -95,7 +105,7 @@ public class User implements Serializable {
 		long temp;
 		temp = Double.doubleToLongBits(balance);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((userID == null) ? 0 : userID.hashCode());
 		result = prime * result + ((pass == null) ? 0 : pass.hashCode());
 		result = prime * result + ((tHistory == null) ? 0 : tHistory.hashCode());
 		return result;
@@ -113,10 +123,10 @@ public class User implements Serializable {
 			return false;
 		if (Double.doubleToLongBits(balance) != Double.doubleToLongBits(other.balance))
 			return false;
-		if (id == null) {
-			if (other.id != null)
+		if (userID == null) {
+			if (other.userID != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (!userID.equals(other.userID))
 			return false;
 		if (pass == null) {
 			if (other.pass != null)
@@ -130,12 +140,15 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
+	public void setAdmin(boolean b) {
+		admin = b;
+	}
 	public boolean isAdmin() {
 		return admin;
 	}
 	@Override
 	public String toString() {
-		return "User[id=" + id + ", balance=" + balance + ", admin=" + admin + "]";
+		return "User[id=" + userID + ", balance=" + balance + ", admin=" + admin + "]";
 	}
 	
 	public String historyToString() {

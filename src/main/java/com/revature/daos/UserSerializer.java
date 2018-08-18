@@ -43,12 +43,12 @@ public class UserSerializer implements UserDao {
 		if (u == null)
 			return;
 		
-		User temp = findByUsername(u.getId());
+		User temp = findByUsername(u.getUserId());
 		
 		if (!(temp == null))
 			throw new UserAlreadyExistsException("User already exists");
 		
-		if(u.getId().equalsIgnoreCase("register")) {
+		if(u.getUserId().equalsIgnoreCase("register")) {
 			throw new UserAlreadyExistsException("Cannot use the ID 'register'");
 		}
 			
@@ -90,10 +90,10 @@ public class UserSerializer implements UserDao {
 			System.out.println("Please use delete functionality instead");
 			return;
 		}
-		String idCheck = u.getId();
+		String idCheck = u.getUserId();
 		User marker = null;
 		for(User current: userSet) {
-			if(current.getId().equals(idCheck))
+			if(current.getUserId().equals(idCheck))
 			{
 				marker = current;
 			}
@@ -112,6 +112,16 @@ public class UserSerializer implements UserDao {
 		for(User cur:userSet) {
 			System.out.println(cur.getId());
 		}
+	}
+	@Override
+	public void makeDeposit(User u, int amount) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void makeWithdrawl(User u, int amount) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

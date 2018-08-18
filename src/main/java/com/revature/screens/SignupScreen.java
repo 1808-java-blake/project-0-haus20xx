@@ -1,5 +1,6 @@
 package com.revature.screens;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import com.revature.beans.User;
@@ -17,21 +18,29 @@ public class SignupScreen implements Screen{
 	public Screen start() {
 		Scanner scan = BankingLauncher.scan;
 		User u = new User();
+		try {
 		System.out.println("Enter the Username you would like to register:");
-		u.setId(scan.nextLine());
+		u.setUserId(scan.nextLine());
 		System.out.println("Enter the Password you would like to use:");
 		u.setPass(scan.nextLine());
 		System.out.println("Please enter your initial deposit:");
 		u.setBalance(Integer.parseInt(UtilityClass.removePunctuation(scan.nextLine())));
-		try {
+		
 		ud.createUser(u);
+		}
+		catch(NumberFormatException e ) {
+			System.out.println("Invalid input.");
+			return this;
+		}
+		catch(NoSuchElementException e) {
+			System.out.println("Invalid input.");
+			return this;
 		}
 		catch(UserAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 			return this;
-			
 		}
-		System.out.println("Successful account creation!");
+
 		return new LoginScreen();
 	}
 

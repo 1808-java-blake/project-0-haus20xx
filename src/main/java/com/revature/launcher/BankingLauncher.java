@@ -2,8 +2,8 @@ package com.revature.launcher;
 
 import java.util.Scanner;
 
-import com.revature.beans.User;
-import com.revature.daos.UserDao;
+//import com.revature.beans.User;
+//import com.revature.daos.UserDao;
 import com.revature.screens.Screen;
 import com.revature.screens.StartupScreen;
 
