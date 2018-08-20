@@ -18,8 +18,6 @@ public interface UserDao {
 	
 	void updateUser(User u);
 	
-	void deleteUser(User u);
-	
 	void displayAllUserID();
 	
 	void makeDeposit(User u, int amount);

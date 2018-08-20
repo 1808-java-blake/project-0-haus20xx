@@ -103,11 +103,6 @@ public class UserSerializer implements UserDao {
 	}
 	
 	
-	@Override
-	public void deleteUser(User u) {
-		userSet.remove(u);
-	}
-	
 	public void displayAllUserID(){
 		for(User cur:userSet) {
 			System.out.println(cur.getId());

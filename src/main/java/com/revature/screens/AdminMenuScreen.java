@@ -37,6 +37,10 @@ public class AdminMenuScreen implements Screen{
 		case "2":
 			System.out.println("Type in a validUserID");
 			in = scan.nextLine();
+			if(loggedIn.getUserId().equalsIgnoreCase(in)) {
+				System.out.println("You may not select yourself!");
+				break;
+			}
 			selectedUser = ud.findByUsername(in);
 			if (selectedUser == null)
 				System.out.println("Invalid UserID");

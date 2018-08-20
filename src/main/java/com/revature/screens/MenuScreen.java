@@ -28,6 +28,7 @@ public class MenuScreen implements Screen {
 		if (loggedIn.isAdmin()) {
 			System.out.println("7. ADMIN FUNCTIONS");
 		}
+		try {
 		String selection = scan.nextLine();
 		selection = selection.substring(0, 1);
 		switch (selection) {
@@ -60,11 +61,16 @@ public class MenuScreen implements Screen {
 		case "7":
 			if(loggedIn.isAdmin())
 				return new AdminMenuScreen(loggedIn);
-			default:
+		default:
 			System.out.println("Invalid choice, ensure you entered a listed number with no punctuation");
 			return this;
 		}
 		return this;
+		}
+		catch(NumberFormatException e) {
+			System.out.println("Invalid user input! Please try again.");
+			return this;
+		}
 	}
 
 	
