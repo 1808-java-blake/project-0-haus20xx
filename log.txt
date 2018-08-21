@@ -34,3 +34,71 @@
 2018-08-20 14:29:56 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
 2018-08-20 14:29:56 DEBUG UserDaoJdbc:82 - the amount added is 50.0
 2018-08-20 14:29:56 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 09:56:02 TRACE UserDaoJdbc:123 - failed to find user with credentials
+2018-08-21 09:56:13 TRACE UserDaoJdbc:89 - failed to find user
+2018-08-21 09:56:22 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 09:56:22 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 09:56:23 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 09:56:23 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 09:56:23 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 09:56:23 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 09:57:24 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 09:57:24 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 09:57:24 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 09:57:24 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 09:57:25 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:23:55 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:23:56 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:23:56 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:23:56 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:23:56 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:24:40 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:25:53 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:25:54 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:25:54 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:25:54 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:25:54 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:27:27 DEBUG UserDaoJdbc:82 - the amount added is 200.0
+2018-08-21 10:27:28 DEBUG UserDaoJdbc:79 - The size of the queried array results is :0
+2018-08-21 10:27:28 DEBUG UserDaoJdbc:82 - the amount added is 1000.0
+2018-08-21 10:27:28 DEBUG UserDaoJdbc:82 - the amount added is 50.0
+2018-08-21 10:27:28 DEBUG UserDaoJdbc:82 - the amount added is 200.0

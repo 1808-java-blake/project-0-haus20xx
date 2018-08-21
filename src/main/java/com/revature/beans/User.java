@@ -6,9 +6,13 @@ import java.util.List;
 
 public class User implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9123369310406954167L;
 	private String userID;
 	private String pass;
-	private static final String adminPasscode = "top level secret";
+	private static final String adminPasscode = "toplevelsecret";
 	private int balance;
 	private List<Integer> tHistory;
 	private boolean admin = false;
@@ -146,7 +150,7 @@ public class User implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "User[id=" + userID + ", balance=" + balance + ", admin=" + admin + "]";
+		return "User[id=" + userID + ", balance=" + balance + ", admin=" + admin + "serial= " + id+ "]";
 	}
 	
 	public String historyToString() {

@@ -70,6 +70,7 @@ public class AdminMenuScreen implements Screen{
 			System.out.println("Enter the universal admin passcode");
 			in = scan.nextLine();
 			selectedUser.makeAdmin(in);
+			ud.updateUser(selectedUser);
 			break;
 		case "7":
 			return new MenuScreen(loggedIn);

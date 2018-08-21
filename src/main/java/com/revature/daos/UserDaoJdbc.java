@@ -149,15 +149,16 @@ public class UserDaoJdbc implements UserDao{
 	@Override
 	public void displayAllUserID() {
 		try (Connection conn = cu.getConnection()){
-			PreparedStatement ps = conn.prepareStatement("SELECT user_id FROM users");
+			PreparedStatement ps = conn.prepareStatement("SELECT user_id, is_admin FROM users");
 			ResultSet rs = ps.executeQuery();
-			while(rs.next())
+			while(rs.next()) {
 				if(rs.getBoolean("is_admin"))
 						System.out.print("(ADMIN)");
 				System.out.println(rs.getString("user_id"));
+			}
 		}
 		catch(SQLException e) {
-			
+			System.out.println(e);
 		}
 		
 	}
